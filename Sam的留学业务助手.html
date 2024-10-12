@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>留学顾问精进</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        nav {
+            background-color: #2980b9;
+            padding: 0.5rem 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .quiz-section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .option {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #d5dbdb;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #27ae60;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .correct {
+            color: var(--secondary-color);
+        }
+        .incorrect {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>留学顾问精进</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#objective">客观题</a></li>
+            <li><a href="#subjective">主观题</a></li>
+            <li><a href="#scenario">场景练习</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="objective" class="quiz-section">
+            <h2>客观题</h2>
+            <div class="question">
+                <p>1. 雅思考试包括哪几个部分？</p>
+                <div class="options">
+                    <div class="option" onclick="checkAnswer(this, true)">A. 听力、阅读、写作、口语</div>
+                    <div class="option" onclick="checkAnswer(this, false)">B. 听力、阅读、写作</div>
+                    <div class="option" onclick="checkAnswer(this, false)">C. 听力、阅读、口语</div>
+                    <div class="option" onclick="checkAnswer(this, false)">D. 阅读、写作、口语</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+        </section>
+        
+        <section id="subjective" class="quiz-section">
+            <h2>主观题</h2>
+            <div class="question">
+                <p>2. 简述雅思写作评分的四大标准。</p>
+                <textarea rows="4" placeholder="请输入你的答案"></textarea>
+                <button onclick="showAnswer(this)">查看参考答案</button>
+                <div class="feedback" style="display:none;">
+                    参考答案: 雅思写作评分的四大标准是：
+                    1. TR (Task Response) - 任务回应
+                    2. CC (Coherence and Cohesion) - 连贯与衔接
+                    3. LR (Lexical Resource) - 词汇资源
+                    4. GRA (Grammatical Range and Accuracy) - 语法范围与准确性
+                </div>
+            </div>
+        </section>
+        
+        <section id="scenario" class="quiz-section">
+            <h2>场景练习</h2>
+            <div class="question">
+                <p>3. 一位学生希望申请英国G5院校的商科硕士,但雅思成绩只有6.5分。作为留学顾问,你会如何建议?</p>
+                <textarea rows="6" placeholder="请输入你的建议"></textarea>
+                <button onclick="showAnswer(this)">查看参考建议</button>
+                <div class="feedback" style="display:none;">
+                    参考建议:
+                    1. 建议学生重新准备雅思考试,争取达到7.0或更高分数。
+                    2. 同时开始准备申请材料,如个人陈述、推荐信等。
+                    3. 考虑申请G5院校的预科课程或语言班。
+                    4. 探索其他背景提升机会,如相关实习或研究项目。
+                    5. 制定备选方案,如考虑其他优秀的非G5院校。
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function checkAnswer(element, isCorrect) {
+            const feedback = element.parentElement.nextElementSibling;
+            if (isCorrect) {
+                feedback.textContent = "正确!";
+                feedback.className = "feedback correct";
+            } else {
+                feedback.textContent = "不正确,请再试一次。";
+                feedback.className = "feedback incorrect";
+            }
+        }
+
+        function showAnswer(button) {
+            const feedback = button.nextElementSibling;
+            feedback.style.display = feedback.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
+
