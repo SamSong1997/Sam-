@@ -5,13 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>留学顾问业务能力自测</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: 0 auto; }
-        .question { margin-bottom: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 5px; }
-        .options { margin-top: 10px; }
-        .option { margin: 5px 0; }
-        .answer { display: none; color: green; margin-top: 10px; }
-        button { margin-top: 10px; padding: 5px 10px; }
-        textarea { width: 100%; height: 100px; margin-top: 10px; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px;
+            background-color: #f5f5f7;
+        }
+        h1, h2 { 
+            color: #1d1d1f;
+        }
+        .question { 
+            background-color: #fff;
+            border-radius: 18px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .options { 
+            margin-top: 16px;
+        }
+        .option { 
+            margin: 8px 0;
+        }
+        .answer { 
+            display: none; 
+            color: #06c;
+            margin-top: 16px;
+            font-weight: 500;
+        }
+        button { 
+            background-color: #0071e3;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 980px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0077ed;
+        }
+        textarea { 
+            width: 100%; 
+            height: 100px; 
+            margin-top: 16px;
+            border: 1px solid #d2d2d7;
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -25,7 +71,8 @@
             <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('ielts1')">显示答案</button>
             <div id="ielts1" class="answer">
-                答案: 听力(40分钟)、阅读(60分钟)、写作(60分钟)、口语(11-14分钟)
+                答案: 听力(40分钟)、阅读(60分钟)、写作(60分钟)、口语(11-14分钟)。
+                拓展: 雅思考试总时长约为2小时45分钟,其中口语考试可能在其他三个部分考试的前后几天进行。听力部分实际上包括30分钟的答题时间和10分钟的答题卡转写时间。
             </div>
         </div>
 
@@ -39,16 +86,38 @@
             </div>
             <button onclick="showAnswer('ielts2')">显示答案</button>
             <div id="ielts2" class="answer">
-                答案: A, B, C, D 全部正确。四大标准是：TR (任务回应)、CC (连贯与衔接)、LR (词汇资源)、GRA (语法范围与准确性)
+                答案: A, B, C, D 全部正确。四大标准是：TR (任务回应)、CC (连贯与衔接)、LR (词汇资源)、GRA (语法范围与准确性)。
+                拓展: 这四个标准各占25%的权重。TR关注是否完全回应了题目要求；CC评估文章结构和逻辑；LR考察词汇的准确性和多样性；GRA则关注语法的复杂度和准确性。
             </div>
         </div>
 
         <div class="question">
-            <h3>3. 简述GETS真经教学体系的特点。</h3>
+            <h3>3. 学为贵雅思真经体系教材包括哪些？</h3>
             <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('ielts3')">显示答案</button>
             <div id="ielts3" class="answer">
-                答案: GETS真经教学体系是由学为贵创始人刘洪波开发的雅思备考体系。它强调系统化、科学化的学习方法，通过深入理解雅思考试的设计原理和出题逻辑，帮助学生更高效地备考。
+                答案: 1. 王陆语料库 2. 雅思词汇真经 3. 雅思真经系列（包括写作真经总纲、179组同义替换、538等）
+                拓展: 学为贵的教材体系采用"五大逻辑词群记忆法"：搭配、用法、词源、文化、时尚。这种方法有助于学生更全面、深入地理解和记忆词汇,提高语言应用能力。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>4. 为什么称刘洪波老师为"雅思教父"？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('ielts4')">显示答案</button>
+            <div id="ielts4" class="answer">
+                答案: 1. 雅思官方学术评选第一人 2. 官方讲座人数历史新高 3. 当当网雅思教材排行NO.1 4. 北京封闭班6年级11岁学生雅思7分
+                拓展: 刘洪波老师创立的GETS真经教学体系被广泛认可,他的教学方法强调系统化、科学化的学习,深入理解雅思考试的设计原理和出题逻辑。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>5. 雅思听力部分的四个维度是什么？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('ielts5')">显示答案</button>
+            <div id="ielts5" class="answer">
+                答案: 多人生活(Section 1)、单人生活(Section 2)、多人学习(Section 3)、单人学习(Section 4)
+                拓展: Section 1和3被认为是相对容易的部分,因为它们涉及日常生活和学习场景,通常包含多人对话,更接近真实生活情境。Section 2和4则更具挑战性,通常是单人演讲或讲座,要求考生有更强的专注力和理解能力。
             </div>
         </div>
     </section>
@@ -57,35 +126,60 @@
         <h2>留学规划</h2>
 
         <div class="question">
-            <h3>4. 英国G5院校包括哪些大学？</h3>
+            <h3>6. 英国G5院校包括哪些大学？</h3>
             <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('sa1')">显示答案</button>
             <div id="sa1" class="answer">
                 答案: 牛津大学、剑桥大学、帝国理工学院、伦敦大学学院、伦敦政治经济学院
+                拓展: G5是英国顶尖大学的非正式组织,成立于2004年。这些大学在研究和教学方面都处于世界领先地位,每年获得大量的研究资金支持。
             </div>
         </div>
 
         <div class="question">
-            <h3>5. 以下哪些因素会影响留学申请的成功率？（多选）</h3>
-            <div class="options">
-                <div class="option"><input type="checkbox"> A. 学术成绩</div>
-                <div class="option"><input type="checkbox"> B. 语言成绩</div>
-                <div class="option"><input type="checkbox"> C. 课外活动</div>
-                <div class="option"><input type="checkbox"> D. 申请时间</div>
-                <div class="option"><input type="checkbox"> E. 个人陈述</div>
-            </div>
+            <h3>7. 澳洲八大包括哪些大学？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('sa2')">显示答案</button>
             <div id="sa2" class="answer">
-                答案: A, B, C, D, E 全部正确。这些因素都会影响留学申请的成功率。
+                答案: 墨尔本大学、澳大利亚国立大学、悉尼大学、新南威尔士大学、昆士兰大学、莫纳什大学、西澳大学、阿德莱德大学
+                拓展: 澳洲八大是澳大利亚最古老、最负盛名的八所公立大学,它们组成了"澳大利亚八校联盟"(Group of Eight),类似于美国的常春藤联盟。这些大学在教学质量、研究成果和国际声誉方面都处于澳洲领先地位。
             </div>
         </div>
 
         <div class="question">
-            <h3>6. 简述"先到先得"和"早轮申请"的区别。</h3>
+            <h3>8. 简述澳洲本科升学的三种主要方式。</h3>
             <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('sa3')">显示答案</button>
             <div id="sa3" class="answer">
-                答案: "先到先得"指学校在收到合格申请后立即发放录取,名额用完即止。"早轮申请"是指在正常申请截止日期之前的一个特定时间段内提交申请,通常能获得更多的考虑和更快的结果。
+                答案: 1. 高考成绩直升：高考成绩达标，满足雅思条件，可直接升入澳洲高校大一。
+                2. 预科+本科：通过预科进入澳洲八大，预科完成后直接进入本科大一。
+                3. 国际大一：完成国际大一课程后可衔接大二，节省时间成本。
+                拓展: 预科课程通常为期8-12个月,适合英语基础较弱或高考成绩不够理想的学生。国际大一课程则更适合英语基础较好、有意缩短学习时间的学生。选择哪种方式需要根据学生的学术背景、语言能力和职业规划来决定。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>9. 英国留学的主要优势有哪些？</h3>
+            <div class="options">
+                <div class="option"><input type="checkbox"> A. 教育质量高，学制短</div>
+                <div class="option"><input type="checkbox"> B. 申请流程灵活</div>
+                <div class="option"><input type="checkbox"> C. 文凭含金量高</div>
+                <div class="option"><input type="checkbox"> D. 滚动录取制度</div>
+                <div class="option"><input type="checkbox"> E. 签证政策友好</div>
+            </div>
+            <button onclick="showAnswer('sa4')">显示答案</button>
+            <div id="sa4" class="answer">
+                答案: A, B, C, D, E 全部正确
+                拓展: 英国硕士课程通常只需1年,比美国等国家节省时间和费用。滚动录取制度让学生可以更早确定录取结果。近年来,英国还推出了毕业生工作签证(PSW),允许国际学生毕业后在英国工作2-3年,极大提高了留学吸引力。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>10. 英国硕士申请的基本录取要求包括哪些？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('sa5')">显示答案</button>
+            <div id="sa5" class="answer">
+                答案: 1. 本科学历 2. 雅思成绩(通常6.5-7.0,单项不低于6.0) 3. 本科平均分(通常70-75%以上) 4. 个人陈述
+                拓展: 不同层次的大学和专业可能有不同的具体要求。例如,TOP5院校可能要求211/985/双一流背景,平均分85-90%,还可能需要GMAT/GRE成绩。部分专业(如MBA)可能还需要工作经验。申请时要仔细查看每所大学的具体要求。
             </div>
         </div>
     </section>
@@ -94,35 +188,109 @@
         <h2>顾问专业知识</h2>
 
         <div class="question">
-            <h3>7. 留学产品可以分为哪几类？简述每类的特点。</h3>
+            <h3>11. S11中外合作办学院校的四个梯队分别包括哪些院校？</h3>
             <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('pro1')">显示答案</button>
             <div id="pro1" class="answer">
-                答案: 留学产品通常可分为：1) 语言培训(如雅思课程); 2) 申请服务(如文书指导、选校咨询); 3) 签证服务; 4) 行前指导; 5) 境外服务。每类产品针对留学过程的不同阶段,提供专业化的支持和指导。
+                答案: 
+                第一梯队：上海纽约大学、昆山杜克大学
+                第二梯队：香港中文大学（深圳）、香港科技大学（广州）、香港城市大学（东莞）
+                第三梯队：宁波诺丁汉、西交利物浦、北师大港浸会
+                第四梯队：深圳北理莫斯科大学、温州肯恩大学、广东以色列理工学院
+                拓展: S11是指"双一流"建设高校和学科,这些中外合作办学项目旨在引进国际优质教育资源,提升中国高等教育国际化水平。不同梯队的划分主要基于合作院校的国际声誉、办学质量和就业前景等因素。
             </div>
         </div>
 
         <div class="question">
-            <h3>8. 在与客户沟通时,以下哪些行为是正确的？（多选）</h3>
-            <div class="options">
-                <div class="option"><input type="checkbox"> A. 积极倾听客户需求</div>
-                <div class="option"><input type="checkbox"> B. 使用专业术语展示知识</div>
-                <div class="option"><input type="checkbox"> C. 提供个性化的建议</div>
-                <div class="option"><input type="checkbox"> D. 保持耐心和同理心</div>
-                <div class="option"><input type="checkbox"> E. 强调公司优势,贬低竞争对手</div>
-            </div>
+            <h3>12. 简述英国硕士申请的"滚动录取"制度。</h3>
+            <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('pro2')">显示答案</button>
             <div id="pro2" class="answer">
-                答案: A, C, D 正确。B 需要根据客户情况适度使用。E 是不恰当的行为。
+                答案: 滚动录取是指学校在收到合格申请后立即进行审核和发放录取，而不是等到申请截止日期后统一处理。这种制度下，申请越早，获得录取的机会越大，因为随着时间推移，剩余名额会逐渐减少。因此，建议学生尽早准备和提交申请。
+                拓展: 滚动录取制度在英国、澳大利亚等国家的大学中普遍采用。这种制度不仅有利于学生更早确定录取结果,也有助于学校更好地管理招生过程。然而,它也对学生的申请准备提出了更高要求,特别是在准备语言成绩和个人陈述方面。
             </div>
         </div>
 
         <div class="question">
-            <h3>9. 一位客户希望申请英国商科硕士,但雅思成绩只有6.0。作为顾问,你会如何建议？</h3>
+            <h3>13. 学为贵的六大优势是什么？</h3>
             <textarea placeholder="输入你的答案"></textarea>
             <button onclick="showAnswer('pro3')">显示答案</button>
             <div id="pro3" class="answer">
-                答案: 1) 建议客户重新准备雅思考试,争取达到要求分数(通常7.0); 2) 介绍预科或语言课程选项; 3) 考虑申请要求较低的大学或课程; 4) 探讨是否有条件录取的可能性; 5) 建议增加其他方面的背景提升,如实习经历或相关证书。
+                答案: 1. 雅思官方最高级认证：连续8年白金级合作伙伴 2. 创始人刘洪波的雅思教父背景 3. 雅思真经体系化教材 4. GETS真经教学体系 5. 丰富的高分和提分学员案例 6. 学为贵雅思APP和小程序
+                拓展: 学为贵的这些优势形成了一个完整的教学生态系统。官方认证和创始人背景提供了权威性,体系化教材和教学方法确保了教学质量,而APP和小程序则为学生提供了便捷的学习工具。高分案例则是对教学效果的直接证明。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>14. 什么是"五大逻辑词群记忆法"？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro4')">显示答案</button>
+            <div id="pro4" class="answer">
+                答案: 五大逻辑词群记忆法包括：搭配、用法、词源、文化、时尚
+                拓展: 这种记忆方法旨在帮助学生全面理解和记忆词汇。"搭配"关注词语的常见组合,"用法"强调词语在不同语境中的应用,"词源"探讨词语的来源和演变,"文化"联系词语背后的文化内涵,"时尚"则关注词语的当代用法和流行趋势。这种多维度的学习方法有助于学生更好地掌握和运用词汇。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>15. 学为贵的一站式留学业务布局包含哪些方面？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro5')">显示答案</button>
+            <div id="pro5" class="answer">
+                答案: 包括雅思、托福、A-Level、AP等考试培训,以及背景提升、择校等留学服务。
+                拓展: 这种一站式服务模式旨在为学生提供从语言考试到最终留学申请的全程支持。它不仅简化了学生的留学准备过程,也确保了各个环节的连贯性和一致性。此外,这种模式还有助于学为贵建立长期客户关系,提高客户粘性。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>16. 为什么不推荐刷题法学雅思？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro6')">显示答案</button>
+            <div id="pro6" class="answer">
+                答案: 刷题法虽然可以熟悉题型,但无法系统提高语言能力。雅思考试重点考察语言应用能力,而非题型技巧。
+                拓展: 学为贵提倡的方法是通过系统学习和理解雅思考试的设计原理来提高成绩。这包括掌握核心词汇、理解出题逻辑、提高语言应用能力等。这种方法虽然可能初期见效较慢,但长期来看更有利于语言能力的真正提升。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>17. 雅思听力常见问题有哪些？如何解决？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro7')">显示答案</button>
+            <div id="pro7" class="answer">
+                答案: 常见问题：听不懂、听不到、写不对(拼写题)。解决方法：
+                1. 听不懂：精听、跟读练习,提高对核心词的敏感度
+                2. 听不到：熟记各类常见考点词,如must = required
+                3. 写不对：熟悉《听力语料库》中的179个核心高频考点词
+                拓展: 学为贵的听力训练方法强调"精"而非"泛"。通过精听和跟读,学生可以提高对语音细节的敏感度。同时,通过系统学习核心词汇和常见表达,可以更好地预测和捕捉关键信息。这种方法不仅有助于提高听力成绩,也能提升整体的英语听说能力。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>18. 雅思阅读部分的主要考点类型有哪些？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro8')">显示答案</button>
+            <div id="pro8" class="answer">
+                答案: 主要考点类型包括语法考点和单词考点。常见题型有单词、句子、段落和匹配题。
+                拓展: 雅思阅读考试不仅测试考生的词汇量和语法知识,更重要的是考察考生的快速阅读理解能力和信息提取能力。学为贵的阅读训练方法强调理解考官的出题点和考点设计,这有助于学生更有针对性地准备考试,提高答题效率和准确率。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>19. 雅思写作Task 1和Task 2的字数要求和时间分配是怎样的？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro9')">显示答案</button>
+            <div id="pro9" class="answer">
+                答案: Task 1要求至少150字,建议用时20分钟；Task 2要求至少250字,建议用时40分钟。
+                拓展: 虽然Task 2的字数要求和建议时间更多,但两个任务的重要性是相同的,都占写作总分的50%。Task 1通常涉及图表描述或信件写作,而Task 2则是议论文写作。学为贵建议学生在准备时要均衡发展这两种写作能力,并注意控制时间,确保两个任务都能完成。
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>20. 雅思口语考试的三个部分分别是什么？每部分的时长如何？</h3>
+            <textarea placeholder="输入你的答案"></textarea>
+            <button onclick="showAnswer('pro10')">显示答案</button>
+            <div id="pro10" class="answer">
+                答案: Part 1: 5分钟,回答考官关于个人生活的问题；Part 2: 1分钟准备+2分钟回答,根据话题卡进行演讲；Part 3: 5分钟,就Part 2的话题进行更深入的讨论。
+                拓展: 口语考试总时长为11-14分钟。Part 1旨在让考生放松,考察基本交流能力；Part 2测试考生的独立表达能力；Part 3则考察考生的分析和讨论能力。学为贵的口语训练强调自然放松、逻辑沟通,并建议学生在回答时适当使用肢体语言,以展现自信和流利度。
             </div>
         </div>
     </section>
